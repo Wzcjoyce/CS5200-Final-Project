@@ -1,0 +1,53 @@
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
+
+            <style>
+                .bottom-five {
+                   margin-bottom: 10mm;
+                }
+            </style>
+
+
+
+            <p class="bottom-five">
+            </p>
+
+
+            <a routerLink="/api/manager/show" routerLinkActive="active-link" (click)="Switch_To_Manager()">
+                Manager
+            </a>
+
+              
+            <p class="bottom-five">
+            </p>
+        
+            <a routerLink="/api/customer/show" routerLinkActive="active-link" (click)="Switch_To_Customer()">
+                Customer
+            </a>
+
+            <p class="bottom-five">
+            </p>
+        
+            <a routerLink="/api/provider/show" routerLinkActive="active-link" (click)="Switch_To_Provider()">
+                Provider
+            </a>
+
+            <p class="bottom-five">
+            </p>
+        
+            <a routerLink="/api/product/show" routerLinkActive="active-link"  (click)="Switch_To_Product()">
+                Product
+            </a>
+
+            <p class="bottom-five">
+            </p>
+        
+            <a routerLink="/api/orders/show" routerLinkActive="active-link"  (click)="Switch_To_Orders()">
+                Orders
+            </a>
+
+
+        </ul>
+    </nav>
+</div>

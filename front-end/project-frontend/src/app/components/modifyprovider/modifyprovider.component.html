@@ -1,0 +1,77 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="modifyproviderid"> Provider ID you want to modify:</label> 
+    <input type="text" id="modifyproviderid" name="modifyproviderid">
+</div>
+
+<div>
+    <label for="Company Name"> Company Name:</label> 
+    <input type="text" id="ProviderCompanyName" name="companyname">
+</div>
+
+<div>
+    <label for="Type">Company Type: (Tech / Design)</label>
+    <input type="text" id="ProviderType" name="type">
+</div>
+
+<div>
+    <label for="TeamSize">Team Size:</label>
+    <input type="text" id="ProviderTeamSize" name="teamsize">
+</div>
+
+<div>
+    <label for="quotedPrice">Quoted Price:</label>
+    <input type="text" id="ProviderQuotedPrice" name="quotedPrice">
+</div>
+
+<div>
+    <label for="officialwebsite">Official Website:</label>
+    <input type="text" id="ProviderOfficialWebsite" name="officialwebsite">
+</div>
+
+<div>
+    <label for="frontend">Front End: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderFrontEnd" name="frontend">
+</div>
+
+<div>
+    <label for="backend">Back End: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderBackEnd" name="backend">
+</div>
+
+<div>
+    <label for="dataanalysis">Data Analysis: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderDAtaAnalysis" name="dataanalysis">
+</div>
+
+<div>
+    <label for="UI">UI: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderUI" name="ui">
+</div>
+
+<div>
+    <label for="Logo">Logo: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderLogo" name="logo">
+</div>
+
+<div>
+    <label for="Illustration">Illustration: ( 0: false;  1 : true)</label>
+    <input type="text" id="ProviderIllustration" name="illustration">
+</div>
+
+<p class="bottom-one">
+</p>
+
+<button (click)="ModifyProvider()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>

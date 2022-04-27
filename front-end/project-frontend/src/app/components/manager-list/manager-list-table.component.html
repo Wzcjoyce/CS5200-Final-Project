@@ -1,0 +1,89 @@
+<div>
+    <style>
+        .bottom-three {
+           margin-bottom: 3cm;
+        }
+    </style>
+
+    
+    <style>
+        .bottom-one {
+           margin-bottom: 1cm;
+        }
+    </style>
+      
+      
+    <p class="bottom-three">
+    </p>
+
+    <h2>&nbsp;
+        Manager
+    </h2>
+
+    <p class="bottom-one">
+    </p>
+
+    <p class="bottom-one">
+    </p>
+
+    <div>
+        &nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_showMode()"  class="au-btn-submit">
+        Show All
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_addMode()" class="au-btn-submit">
+        Add
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_deleteMode()" class="au-btn-submit">
+        Delete
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_modifyMode()" class="au-btn-submit">
+        Modify
+        </button>
+
+    </div>
+    
+    <div *ngIf="this.Mode === 'add'">
+
+        <app-addmamager></app-addmamager>
+    </div>
+
+    <div *ngIf="this.Mode === 'delete'">
+        <app-deletemanager></app-deletemanager>
+    </div>
+
+    <div *ngIf="this.Mode === 'modify'">
+        <app-modifymanager></app-modifymanager>
+    </div>
+
+
+
+    <p class="bottom-one">
+    </p>
+
+    <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Manager ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let temp of managers">
+                <td class="align-middle">{{temp.Manager_id}}</td>
+                <td class="align-middle">{{temp.firstName}}</td>
+                <td class="align-middle">{{temp.lastName}}</td>
+                <td class="align-middle">{{temp.Email}}</td>
+                <td class="align-middle">{{temp.Gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

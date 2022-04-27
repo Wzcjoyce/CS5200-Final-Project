@@ -1,0 +1,116 @@
+<div>
+    <style>
+        .bottom-three {
+           margin-bottom: 3cm;
+        }
+    </style>
+
+    
+    <style>
+        .bottom-one {
+           margin-bottom: 1cm;
+        }
+    </style>
+      
+      
+    <p class="bottom-three">
+    </p>
+
+    <h2>&nbsp;
+        Orders
+    </h2>
+
+    <p class="bottom-one">
+    </p>
+
+    <p class="bottom-one">
+    </p>
+
+    <div>
+        &nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_showMode()"  class="au-btn-submit">
+        Show All
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_addMode()" class="au-btn-submit">
+        Add
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_deleteMode()" class="au-btn-submit">
+        Delete
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="Switch_to_modifyMode()" class="au-btn-submit">
+        Modify
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="GetCompleteOrders()" class="au-btn-submit">
+        Completed
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="GetInCompleteOrders()" class="au-btn-submit">
+        Incomplete
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="GetMaxOrder()" class="au-btn-submit">
+        Max Price
+        </button>
+
+    </div>
+
+    <div *ngIf="this.Mode === 'add'">
+
+        <app-addorder></app-addorder>
+    </div>
+
+    <div *ngIf="this.Mode === 'delete'">
+        <app-deleteorder></app-deleteorder>
+    </div>
+
+    <div *ngIf="this.Mode === 'modify'">
+        <app-modifyorders></app-modifyorders>
+    </div>
+
+    <p class="bottom-one">
+    </p>
+
+    <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Price</th>
+                <th>Order Date</th>
+                <th>Is complete</th>
+                <th>Application Type</th>
+                <th>Platform</th>
+                <th>Machine Learning</th>
+                <th>Data Mining</th>
+                <th>Maintenance</th>
+                <th>SaaS</th>
+                <th>Backstage</th>
+                <th>Provider ID</th>
+                <th>Manager ID</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let temp of orders">
+                <td class="align-middle">{{temp.Order_id}}</td>
+                <td class="align-middle">{{temp.Price}}</td>
+                <td class="align-middle">{{temp.Time}}</td>
+                <td class="align-middle">{{temp.isComplete}}</td>
+                <td class="align-middle">{{temp.Type}}</td>
+                <td class="align-middle">{{temp.Platform}}</td>
+                <td class="align-middle">{{temp.machineLearning}}</td>
+                <td class="align-middle">{{temp.dataMining}}</td>
+                <td class="align-middle">{{temp.Maintenance}}</td>
+                <td class="align-middle">{{temp.SaaS}}</td>
+                <td class="align-middle">{{temp.Backstage}}</td>
+                <td class="align-middle"><a class="align-middle" routerLink="/api/provider/getbyid/{{temp.Provider_id}}">
+                    {{temp.Provider_id}}</a></td>
+                <td class="align-middle"><a class="align-middle" routerLink="/api/manager/getbyid/{{temp.Manager_id}}">
+                {{temp.Manager_id}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

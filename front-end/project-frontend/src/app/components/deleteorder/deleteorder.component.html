@@ -1,0 +1,22 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="Order_id">Order ID You want to Delete:</label>
+    <input type="text" id="DeleteOrder_id" name="Order_id">
+</div>
+
+<p class="bottom-one">
+</p>
+
+<button (click)="DeleteOrder()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>

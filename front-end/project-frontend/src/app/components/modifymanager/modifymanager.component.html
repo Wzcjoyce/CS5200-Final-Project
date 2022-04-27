@@ -1,0 +1,42 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="modifyManagerid"> Manager ID you want to modify:</label> 
+    <input type="text" id="modifyManagerid" name="modifyManagerid">
+</div>
+
+<div>
+    <label for="First Name"> First Name:</label> 
+    <input type="text" id="ManagerFirstName" name="firstname">
+</div>
+
+<div>
+    <label for="Last Name">Last Name:</label>
+    <input type="text" id="ManagerLastName" name="lastname">
+</div>
+
+<div>
+    <label for="Email">Email:</label>
+    <input type="text" id="ManagerEmail" name="email">
+</div>
+
+<div>
+    <label for="Gender">Gender:</label>
+    <input type="text" id="ManagerGender" name="gender">
+</div>
+
+<p class="bottom-one">
+</p>
+
+<button (click)="ModifyManager()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>

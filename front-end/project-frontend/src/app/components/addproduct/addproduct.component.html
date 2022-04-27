@@ -1,0 +1,44 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="Date"> Date: ('YYYY-MM-DD')</label> 
+    <input type="text" id="ProductDate" name="date">
+</div>
+
+<div>
+    <label for="Website">Website</label>
+    <input type="text" id="ProductWebsite" name="Website">
+</div>
+
+<div>
+    <label for="IsDemo">Is Demo:</label>
+    <input type="text" id="ProductIsDemo" name="IsDemo">
+</div>
+
+<div>
+    <label for="Description">Description:</label>
+    <input type="text" id="ProductDescription" name="Description">
+</div>
+
+<div>
+    <label for="ProviderId">Provider ID:</label>
+    <input type="text" id="ProductProviderId" name="ProviderId">
+</div>
+
+
+
+<p class="bottom-one">
+</p>
+
+<button (click)="AddProduct()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>

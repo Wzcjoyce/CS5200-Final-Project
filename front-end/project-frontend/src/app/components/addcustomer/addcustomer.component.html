@@ -1,0 +1,53 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="First Name"> First Name:</label> 
+    <input type="text" id="CustomerFirstName" name="firstname">
+</div>
+
+<div>
+    <label for="Last Name">Last Name:</label>
+    <input type="text" id="CustomerLastName" name="lastname">
+</div>
+
+<div>
+    <label for="Company">Company:</label>
+    <input type="text" id="CustomerCompany" name="company">
+</div>
+
+<div>
+    <label for="Email">Email:</label>
+    <input type="text" id="CustomerEmail" name="email">
+</div>
+
+<div>
+    <label for="Description">Description:</label>
+    <input type="text" id="CustomerDescription" name="description">
+</div>
+
+
+<div>
+    <label for="idealPrice">Ideal Price:</label>
+    <input type="text" id="CustomeridealPrice" name="idealPrice">
+</div>
+
+<div>
+    <label for="managerid">Manager ID:</label>
+    <input type="text" id="CustomerManagerId" name="managerid">
+</div>
+
+<p class="bottom-one">
+</p>
+
+<button (click)="AddCustomer()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>

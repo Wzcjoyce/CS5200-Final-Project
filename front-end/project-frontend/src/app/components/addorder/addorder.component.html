@@ -1,0 +1,79 @@
+<style>
+    .bottom-one {
+       margin-bottom: 1cm;
+    }
+</style>
+
+<div>
+    <label for="Price"> Price:</label> 
+    <input type="text" id="OrderPrice" name="Price">
+</div>
+
+<div>
+    <label for="orderdate">Order Date:('YYYY-MM-DD')</label>
+    <input type="text" id="OrderDate" name="orderdate">
+</div>
+
+<div>
+    <label for="iscomplete">Is Complete:</label>
+    <input type="text" id="OrderIsComplete" name="iscomplete">
+</div>
+
+<div>
+    <label for="orderType">Application Type: (Mobile, System, Web)</label>
+    <input type="text" id="OrderType" name="orderType">
+</div>
+
+<div>
+    <label for="platform">Platform:</label>
+    <input type="text" id="Orderplatform" name="platform">
+</div>
+
+
+<div>
+    <label for="ml">Machine learning: ( 0: false;  1 : true)</label>
+    <input type="text" id="OrderMachineLearning" name="ml">
+</div>
+
+<div>
+    <label for="dm">Data Mining: ( 0: false;  1 : true)</label>
+    <input type="text" id="OrderDataMining" name="dm">
+</div>
+
+<div>
+    <label for="maintenance">Maintenance:</label>
+    <input type="text" id="OrderMaintenance" name="maintenance">
+</div>
+
+<div>
+    <label for="SaaS">SaaS: ( 0: false;  1 : true)</label>
+    <input type="text" id="OrderSaaS" name="SaaS">
+</div>
+
+<div>
+    <label for="BackStage">BackStage: ( 0: false;  1 : true)</label>
+    <input type="text" id="OrderBackStage" name="BackStage">
+</div>
+
+
+<div>
+    <label for="providerid">Provider ID:</label>
+    <input type="text" id="OrderProviderId" name="providerid">
+</div>
+
+<div>
+    <label for="managerid">Manager ID:</label>
+    <input type="text" id="OrderManagerId" name="managerid">
+</div>
+
+<p class="bottom-one">
+</p>
+
+<button (click)="AddOrders()"  class="au-btn-submit">Submit</button>
+
+<p class="bottom-one">
+</p>
+
+<h1 style="font-size: 1rem">
+    {{submit_status}}
+</h1>
